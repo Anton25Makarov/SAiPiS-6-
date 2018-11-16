@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="../css/style.css">
+    <title>Lab 6</title>
+    <!-- <script src="../js/myJS2.js"></script>-->
+</head>
+<body onload="databaseObject.functions.createBd()">
+<div id="mainDiv">
+
+    <form>
+        <fieldset id="fieldSet">
+            <legend>Registration</legend>
+            <div id="data">
+                <div class="lineInput">
+                    <div>
+                        <label for="firstName">First name: </label>
+                        <input type="text" name="firstName" id="firstName">
+                    </div>
+                </div>
+                <div class="lineInput">
+                    <div>
+                        <label for="secondName">Second name: </label>
+                        <input type="text" name="secondName" id="secondName">
+                    </div>
+                </div>
+
+                <div class="lineInput">
+                    <div>
+                        <label for="address">Address: </label>
+                        <input type="text" name="address" id="address">
+                    </div>
+                </div>
+                <div class="lineInput">
+                    <div>
+                        <label for="numberOfClass">Class №: </label>
+                        <input type="text" name="numberOfClass" id="numberOfClass">
+                    </div>
+                </div>
+
+                <div class="lineInput">
+                    <label>Is olympic: </label>
+                    <input type="radio" name="olympic" id="olympicYes" value="yes">Yes</input>
+                    <input type="radio" name="olympic" id="olympicNo" value="no">No</input>
+                </div>
+
+                <div class="lineInput">
+                    <div>
+                        <label id="labelForOthers"></label>
+                        <div id="inputOther"></div>
+                        <!--<input type="text" name="numberOfClass" id="numberOfClass">-->
+                    </div>
+                </div>
+            </div>
+
+
+            <p><select name="id" id="idSelectList">
+            </select></p>
+
+
+            <div id="buttons">
+                <input type="button" value="Save" onclick="onButtonAddUser()"/>
+                <input type="button" value="Show table" id="showHideTable" onclick="showAndHideTable()"/>
+                <input type="button" value="Show table non olympics" id="showHideOlympicTable"
+                       onclick="showAndHideTableNonOlympic()"/>
+                <input type="button" value="Show Index" onclick="getIndex()"/>
+                <input type="button" value="Add property" id="otherBut" onclick="addRemoveOthers()"/>
+                <script src="../js/myJS2.js"></script>
+            </div>
+        </fieldset>
+    </form>
+
+    <div id="tableAllStudents">
+
+    </div>
+
+    <div id="tableNonOlympicStudents">
+    </div>
+</div>
+</body>
+</html>
