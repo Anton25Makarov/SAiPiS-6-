@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <link type="text/css" rel="stylesheet" href="../css/style.css">
     <title>Lab 6</title>
-    <script src="../js/myJS2.js"></script>
+    <!-- <script src="../js/myJS.js"></script>-->
 </head>
-<body>
-<div id="mainDiv" onload="">
+<body onload="databaseObject.functions.createBd()">
+<div id="mainDiv">
 
     <form>
         <fieldset id="fieldSet">
@@ -45,21 +45,41 @@
                     <input type="radio" name="olympic" id="olympicNo" value="no">No</input>
                 </div>
 
+                <div class="lineInput">
+                    <div>
+                        <label id="labelForOthers"></label>
+                        <div id="inputOther"></div>
+                        <!--<input type="text" name="numberOfClass" id="numberOfClass">-->
+                    </div>
+                </div>
             </div>
 
-            <p><select name="id" id="id-select-list">
+
+            <p><select name="id" id="idSelectList">
             </select></p>
+
+
             <div id="buttons">
                 <input type="button" value="Save" onclick="onButtonAddUser()"/>
-                <input type="button" value="Upload id" onclick="f()"/>
-                <input type="button" value="Show table"/>
-                <input type="button" value="Save"/>
-                <script src="../js/myJS2.js"></script>
+                <input type="button" value="Show table" id="showHideTable" onclick="showAndHideTable()"/>
+                <input type="button" value="Show table non olympics" id="showHideOlympicTable"
+                       onclick="showAndHideTableNonOlympic()"/>
+                <!--<input type="button" value="Show Index" onclick=""/>-->
+                <input type="button" value="Add property" id="otherBut" onclick="addRemoveOthers()"/>
+                <input type="button" value="Clear inputs" onclick="clearAllFields()"/>
+                <input type="button" value="Add ID property" onclick="addPropertyOtherById()"/>
+                <input type="button" value="Remove student" onclick="removeStudentById()"/>
+                <script src="../js/myJS.js"></script>
             </div>
-
         </fieldset>
     </form>
 
+    <div id="tableAllStudents">
+
+    </div>
+
+    <div id="tableNonOlympicStudents">
+    </div>
 </div>
 </body>
 </html>
